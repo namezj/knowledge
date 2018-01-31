@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        #rota {
+            animation: cesi linear 2s infinite;
+        }
+        @keyframes cesi {
+            from {
+                transform: translate(100px,100px) rotate(0deg);
+            }
+            to {
+                transform: translate(100px,100px) rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<svg viewBox="-2 -2 204 204" style="margin-top: 71px;padding: 36px;width: 100px;height: 100px;background: #fff;">
+    <defs>
+        <linearGradient id="gradient" x1="0" y1="1" x2="1" y2="0">
+            <stop stop-color="#40C381"></stop>
+            <stop offset="100%" stop-color="#40C381" stop-opacity="0"></stop>
+        </linearGradient>
+    </defs>
+    <g id="rota" fill="none" stroke-width="2" transform="translate(100,100)">
+        <path d="M 0,-100 A 100,100 0 1 0 0,100" stroke="#40C381"></path>
+        <path d="M 0,100 A 100,100 1 0 0 100,0" stroke="url(#gradient)"></path>
+        <circle cx="0" cy="-100" r="10" fill="#40C381"></circle>
+    </g>
+</svg>
+
+</body>
+</html>
