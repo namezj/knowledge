@@ -1,0 +1,25 @@
+<div class="item">
+    <!-- 日期分类 -->
+    <div class="mark">{{data|date:"ddMMM"}}</div>
+    <ul class="posts large">
+        <!-- 文章 -->
+        <li ng-repeat="post in posts">
+            <span href="javascript:;" class="tag">{{post.column.name}}</span>
+            <div class="cont">
+                <h3>{{post.title}}</h3>
+                <div class="brief">
+                    <!--标题和文字/标题或和小图时显示，大图隐藏-->
+                    <p ng-class="{only:post.display_style==10001}" ng-if="post.display_styl!=10003">{{post.abstract}}</p>
+                    <!--小图-->
+                    <div class="thumb" ng-if="post.display_style==10002">
+                        <img ng-src="{{post.thumbs[0].small.url}}" alt="">
+                    </div>
+                    <!--大图-->
+                    <div class="gallery" ng-if="post.display_style==10003">
+                        <img ng-src="{{post.thumbs[0].medium.url}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
